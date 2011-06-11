@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Ruby implementation of the FanFeedr api}
   s.description = %q{Ruby implementation of the FanFeedr api}
   s.add_dependency('rake')
-  s.add_dependency('httparty')
+  s.add_dependency('crack')
   s.rubyforge_project = "fanfeedrb"
 
   s.files         = `git ls-files`.split("\n")
