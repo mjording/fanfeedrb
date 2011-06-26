@@ -1,3 +1,4 @@
+require 'yaml'
 class Fanfeedrb
   class Error < RuntimeError
   end

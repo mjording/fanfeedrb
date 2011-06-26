@@ -22,6 +22,10 @@ class Fanfeedrb
         response = fanfeedr.get_json(path)
         [response].flatten.compact.map {|s| Conference.new(self,s)}
       end
+      def event(event_id)
+        raise Error, "No conference id given" if event_id.to_s.empty?
+        Event.new(self,fanfeedr.get_json("/events/#{event_id}"))
+      end
 
       def events(startdate = Time.now, enddate = Time.now)
          today = startdate.strftime("%m/%d/%Y") == enddate.strftime("%m/%d/%Y") && startdate.strftime("%m/%d/%Y") == Time.now.strftime("%m/%d/%Y")
