@@ -3,6 +3,13 @@ class Fanfeedrb
   end
 
   autoload :Runner,  'fanfeedrb/runner'
+  autoload :Fanfeedr, 'fanfeedrb/fanfeedr'
+  autoload :League, 'fanfeedrb/fanfeedr/league'
+  autoload :Event, 'fanfeedrb/fanfeedr/event'
+  autoload :Content, 'fanfeedrb/fanfeedr/content'
+  autoload :Conference, 'fanfeedrb/fanfeedr/conference'
+
+
 
   def self.config
     @config ||= {'api_token' => ENV["FANFEEDR_API_TOKEN"]}.merge(
@@ -116,6 +123,10 @@ class Fanfeedrb
       ssl = config['ssl']
       Fanfeedr.new(token, plan, ssl).league(id)
     end
+  end
+
+  def events
+    
   end
  
   def scenario_word

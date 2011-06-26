@@ -2,7 +2,8 @@ class Fanfeedrb
   class Fanfeedr
     class League < Abstract
       attr_reader :fanfeedr
-      reader :gender, :levels, :sport, :name
+      reader :gender, :levels, :sport, :name, :id
+
 
       def initialize(fanfeedr, attributes = {})
         p "league attr: #{attributes}"
@@ -20,6 +21,19 @@ class Fanfeedrb
         #if filter
         response = fanfeedr.get_json(path)
         [response].flatten.compact.map {|s| Conference.new(self,s)}
+      end
+
+      def events(startdate = Time.now, enddate = Time.now)
+         today = startdate.strftime("%m/%d/%Y") == enddate.strftime("%m/%d/%Y") && startdate.strftime("%m/%d/%Y") == Time.now.strftime("%m/%d/%Y")
+
+
+         path = "/leagues/#{id}/events/today"
+        #today = startdate.strftime("%m/%d/%Y") == enddate.strftime("%m/%d/%Y") && startdate.strftime("%m/%d/%Y") == Time.now.strftime("%m/%d/%Y")
+
+        #subpath =        #path << "?api_key=#{CGI.escape(Fanfeedrb.config['api_token'])}" 
+        #if filter
+        response = fanfeedr.get_json(path)
+
       end
 
 

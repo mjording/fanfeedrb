@@ -5,7 +5,7 @@ class Fanfeedrb
       #reader :description, :author, :position, :complete
       date_reader :date
 
-      def when
+      def happenin
         date && Date.new(date.year, date.mon, date.day)
       end
 
@@ -19,7 +19,7 @@ class Fanfeedrb
       end
 
       def inspect
-        "#<#{self.class.inspect}:#{id.inspect}, event_id: #{event.id.inspect}, date: #{when.inspect} >"
+        "#<#{self.class.inspect}:#{id.inspect}, event_id: #{event.id.inspect}, date: #{happenin.inspect} >"
       end
 
     end
