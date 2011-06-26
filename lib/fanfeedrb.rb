@@ -4,10 +4,6 @@ class Fanfeedrb
 
   autoload :Runner,  'fanfeedrb/runner'
   autoload :Fanfeedr, 'fanfeedrb/fanfeedr'
-  autoload :League, 'fanfeedrb/fanfeedr/league'
-  autoload :Event, 'fanfeedrb/fanfeedr/event'
-  autoload :Content, 'fanfeedrb/fanfeedr/content'
-  autoload :Conference, 'fanfeedrb/fanfeedr/conference'
 
 
 

@@ -118,8 +118,12 @@ class Fanfeedrb
 end
 
 
-#require 'fanfeedrb/fanfeedr/league'
-#require 'fanfeedrb/fanfeedr/events'
+require 'fanfeedrb/fanfeedr/league'
+require 'fanfeedrb/fanfeedr/event'
+require 'fanfeedrb/fanfeedr/content'
+require 'fanfeedrb/fanfeedr/conference'
+require 'fanfeedrb/fanfeedr/team'
+
 
 
 
