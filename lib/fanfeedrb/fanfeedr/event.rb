@@ -1,8 +1,8 @@
 class Fanfeedrb
   class Fanfeedr
     class Event < Abstract
-      attr_reader :name
-      reader :status, :home_team, :season_year, :season_type, :id, :away_team
+      #attr_reader :name
+      reader :name, :status, :home_team, :season_year, :season_type, :id, :away_team
       #reader :description, :author, :position, :complete
       date_reader :date
 
